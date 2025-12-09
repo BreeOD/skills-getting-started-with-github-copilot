@@ -160,21 +160,43 @@ footer {
 }
 
 .participants-list {
-  list-style: disc;
-  padding-left: 18px;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
   max-height: 140px; /* keep long lists compact */
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .participant-item {
-  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
   font-size: 0.95rem;
   color: #333;
   background: rgba(255,255,255,0.5);
-  padding: 4px 8px;
+  padding: 6px 8px;
   border-radius: 4px;
-  display: inline-block;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 .no-participants {
