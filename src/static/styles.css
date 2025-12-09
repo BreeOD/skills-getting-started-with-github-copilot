@@ -142,3 +142,74 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.participants-section {
+  margin-top: 10px;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(26,35,126,0.03), rgba(0,0,0,0.01));
+  border: 1px solid rgba(26,35,126,0.06);
+  border-radius: 6px;
+}
+
+.participants-title {
+  display: block;
+  margin-bottom: 6px;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.participants-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  max-height: 140px; /* keep long lists compact */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  background: rgba(255,255,255,0.5);
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+.no-participants {
+  margin: 0;
+  color: #666;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* small tweak: make the participants list slightly more compact on narrow screens */
+@media (max-width: 480px) {
+  .participant-item {
+    font-size: 0.92rem;
+    margin: 4px 0;
+  }
+}
